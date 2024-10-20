@@ -1,9 +1,9 @@
-import React from "react";
+
 
 const RestaurantLogin = () => {
   return (
     <>
-      <div className="container">
+      <div >
         <div className="input-wrapper">
           <input
             type="email"
@@ -19,7 +19,7 @@ const RestaurantLogin = () => {
           />
         </div>
         <div className="input-wrapper">
-          <button className="input-field">Login</button>
+          <button className="login-button">Login</button>
         </div>
       </div>
     </>

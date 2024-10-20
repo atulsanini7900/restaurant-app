@@ -1,7 +1,25 @@
+
+.container{
+  text-align: center;
+}
 .input-wrapper{
   margin: 20px;
 }
 .input-field{
   height: 30px;
   width: 300px;
+}
+.login-button{
+  height: 35px;
+  width: 270px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.button-switch{
+  color: skyblue;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  margin: 20px;
+
 }
