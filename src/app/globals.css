@@ -1,25 +1,131 @@
-
-.container{
+*:focus {
+  outline: none;
+}
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.header-wrapper ul {
+  display: flex;
+}
+.header-wrapper ul li {
+  list-style-type: none;
+  padding: 20px;
+}
+.header-wrapper ul li a {
+  text-decoration: none;
+}
+.header-wrapper ul li button {
+  font-size: 15px;
+  color: blueviolet;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.footer-wrapper {
+  bottom: 0;
+  /* margin-bottom: 0; */
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  font-size: 15px;
+}
+.container {
   text-align: center;
 }
-.input-wrapper{
+.input-wrapper {
   margin: 20px;
 }
-.input-field{
+.input-field {
   height: 30px;
   width: 300px;
 }
-.login-button{
+.login-button {
   height: 35px;
   width: 270px;
   cursor: pointer;
   border-radius: 5px;
 }
-.button-switch{
+.button-switch {
   color: skyblue;
   cursor: pointer;
   border: 0;
   background: transparent;
   margin: 20px;
+}
+.main-page-banner {
+  background-image: url("https://t3.ftcdn.net/jpg/05/89/70/46/360_F_589704609_b84XoVDaeopctL2Iz0lG4IQT86Dzm7xz.jpg");
+  background-color: rgb(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+  padding: 30px;
+  height: 230px;
+  color: #fff;
+  text-align: center;
+}
+.input-wrapper {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  width: 60%;
+  margin: auto;
+}
+.select-input {
+  height: 40px;
+  border: none;
+  width: 25%;
+  padding-left: 15px;
+}
+.search-input {
+  height: 40px;
+  border: none;
+  width: 45%;
+  padding-left: 15px;
+  border-left: 1px solid #ccc;
+}
+.search-location {
+  color: black;
+  list-style: none;
+  position: absolute;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  margin-left: -5px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+.search-location li {
+  width: 180px;
+  padding: 5px;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+.restaurant-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.restaurant-wrapper {
+  width: 45%;
+  background-color: orange;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.restaurant-wrapper .heading-warapper,
+.restaurant-wrapper .address-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+.restaurant-wrapper h5 {
+  margin-left: 10px;
+}
 
+.restaurant-wrapper .address {
+  margin-left: 5px;
 }
