@@ -2,12 +2,14 @@
 import { useEffect, useState } from "react";
 import CustomerHeader from "./_components/CustomerHeader";
 import RestaurantFooter from "./_components/RestaurantFooter";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [locations, setLocations] = useState([]);
   const [selectedLocation, setSelectedLocation] = useState("");
   const [showLocation, setShowLocation] = useState(false);
   const [restaurant, setRastaurant] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     searchLocation();
@@ -34,10 +36,10 @@ export default function Home() {
     }
   };
 
-  function handleSelectLocation(city) {
-    setSelectedLocation(city);
+  function handleSelectLocation(item) {
+    setSelectedLocation(item);
     setShowLocation(false);
-    loadRestaurant({ location: city });
+    loadRestaurant({ location: item });
   }
   return (
     <main>
@@ -54,9 +56,9 @@ export default function Home() {
           />
           <ul className="search-location">
             {showLocation &&
-              locations?.map((city, key) => (
-                <li key={key} onClick={() => handleSelectLocation(city)}>
-                  {city}
+              locations?.map((item, key) => (
+                <li key={key} onClick={() => handleSelectLocation(item)}>
+                  {item}
                 </li>
               ))}
           </ul>
@@ -73,7 +75,14 @@ export default function Home() {
       </div>
       <div className="restaurant-list-container">
         {restaurant.map((restoData, key) => (
-          <div className="restaurant-wrapper">
+          <div
+            onClick={() =>
+              router.push(
+                "explore/" + restoData.restaurantName + "?id=" + restoData._id
+              )
+            }
+            className="restaurant-wrapper"
+          >
             <div key={key} className="heading-warapper">
               <h3>{restoData.restaurantName}</h3>
               <h5>Contact: {restoData.contactNo}</h5>

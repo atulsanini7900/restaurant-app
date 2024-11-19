@@ -129,3 +129,39 @@
 .restaurant-wrapper .address {
   margin-left: 5px;
 }
+.details-wrapper {
+  display: flex;
+  background-color: orange;
+}
+.details-wrapper h4 {
+  width: 50%;
+}
+.food-item-wrapper {
+  margin-top: 50px;
+  /* display: flex; */
+}
+.food-item-wrapper .list-items {
+  color: orange;
+  border: 1px solid black;
+  padding: 20px;
+  font-weight: bold;
+  display: flex;
+  text-transform: capitalize;
+}
+.food-item-wrapper .list-items button {
+  border: none;
+  background-color: orange;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-weight: 100;
+}
+.food-item-wrapper .list-items img {
+  width: 100px;
+  margin-right: 20px;
+}
+.food-item-wrapper .list-items .description {
+  font-weight: lighter;
+  margin-bottom: 3px;
+}
