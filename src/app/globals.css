@@ -24,7 +24,7 @@
 }
 .footer-wrapper {
   bottom: 0;
-  /* margin-bottom: 0; */
+  /* padding-top: 200px; */
   text-align: center;
   width: 100%;
   position: fixed;
@@ -64,7 +64,6 @@
 }
 .input-wrapper {
   background-color: #fff;
-  border: 1px solid #ccc;
   border-radius: 4px;
   padding: 5px;
   width: 60%;
@@ -142,7 +141,7 @@
 }
 .food-item-wrapper .list-items {
   color: orange;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   padding: 20px;
   font-weight: bold;
   display: flex;
@@ -164,4 +163,55 @@
 .food-item-wrapper .list-items .description {
   font-weight: lighter;
   margin-bottom: 3px;
+}
+.list-item-block-1 {
+  width: 20%;
+}
+.list-item-block-2 {
+  width: 80%;
+}
+.list-item-block-3 {
+  width: 20%;
+}
+
+.total-wrapper {
+  margin-top: 50px;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 1px solid orange;
+  padding-bottom: 20px;
+}
+.total-wrapper .row {
+  display: flex;
+  color: orange;
+  margin-left: 20%;
+  margin-right: 20%;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 200;
+}
+.total-wrapper .block-1 {
+  width: 70%;
+}
+.total-wrapper .block-2 {
+  width: 30%;
+}
+.total-wrapper .block-2 button {
+  padding: 10px 30px;
+  color: white;
+  background-color: orange;
+  border: none;
+  border-radius: 4px;
+  font-weight: 100;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
