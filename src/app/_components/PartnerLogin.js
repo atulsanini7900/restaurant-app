@@ -33,7 +33,9 @@ const PartnerLogin = (props) => {
       if (data.success) {
         const { result } = data;
         delete result.password;
+        if (typeof window !== "undefined") {
         localStorage.setItem("partner", JSON.stringify(data.result));
+        }
         router.push("/deliverydashbord");
       } else {
         alert("Login Failed");

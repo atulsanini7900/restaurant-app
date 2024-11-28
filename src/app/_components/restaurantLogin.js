@@ -30,7 +30,9 @@ const RestaurantLogin = () => {
       if (data.success && data.result) {
         const { result } = data;
         delete result.password;
+        if (typeof window !== "undefined") {
         localStorage.setItem("restaurantUser", JSON.stringify(data.result));
+        }
         router.push("/restaurant/dashbord");
       } else {
         alert("Login Failed");

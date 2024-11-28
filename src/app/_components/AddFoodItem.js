@@ -16,7 +16,9 @@ const AddFoodItem = (props) => {
     }
 
     let resto_id;
+    if (typeof window !== "undefined") {
     const restaurantData = JSON.parse(localStorage.getItem("restaurantUser"));
+    }
     if (restaurantData) {
       resto_id = restaurantData._id;
     }

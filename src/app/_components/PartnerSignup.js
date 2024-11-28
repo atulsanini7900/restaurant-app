@@ -60,7 +60,9 @@ const PartnerSignUp = (props) => {
     if (response.success) {
       const { result } = response;
       delete result.password;
+      if (typeof window !== "undefined") {
       localStorage.setItem("partner", JSON.stringify(result));
+      }
 
       router.push("/deliverydashbord");
     }
